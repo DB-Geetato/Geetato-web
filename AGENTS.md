@@ -22,13 +22,8 @@ Geetato Bakes & Bliss is a premium artisan bakery based in Indirapuram, Ghaziaba
 ## Project Guidelines
 - Use the provided Geetato logo and site icon.
 - Primary CTA buttons should always be Hot Pink.
-- Maintain high visual reality in images.
+- Maintain high visual reality in images (reference provided).
 - SEO optimized with proper meta tags and internal linking.
-- **Image Requirements:** 
-    - Hero: 1920x1080px
-    - Client Logos: 200x80px PNG
-    - Products: 800x600px
-    - Founder: 600x600px
 
 ## Common Patterns
 - Marketing pages use a shared layout in `src/app/(marketing)/layout.tsx`.

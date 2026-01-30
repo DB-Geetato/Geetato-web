@@ -1,192 +1,174 @@
-import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, ShieldCheck, Heart, Zap, Award, Factory, Truck, Users, ArrowRight } from "lucide-react";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Why Geetato? - Quality, Health & Reliability in Bakery Supply",
-  description: "Discover why 50+ corporations trust Geetato. We focus on clean ingredients, 48hr fermentation, export-grade quality, and reliable 24/7 supply chain capability.",
-};
+import Image from "next/image";
+import { CheckCircle2, Award, Zap, Heart, Leaf, Users, ShieldCheck, ArrowRight } from "lucide-react";
 
 export default function WhyGeetatoPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-geetato-cream py-24 text-center">
+      <section className="relative overflow-hidden bg-geetato-charcoal py-20 text-white lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
-          <h1 className="text-4xl font-bold tracking-tight text-geetato-charcoal sm:text-7xl mb-6">
-            Why <span className="text-geetato-pink">Geetato?</span>
-          </h1>
-          <p className="mt-6 text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We are more than just a bakery. We are a reliable partner for your business, focusing on three core pillars: Quality, Health, and Reliability.
-          </p>
+          <div className="mx-auto max-w-3xl text-center">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+              The <span className="text-geetato-pink">Geetato</span> Difference
+            </h1>
+            <p className="mt-6 text-xl text-white/70">
+              Why 50+ corporations and thousands of individuals choose Geetato Bakes & Bliss for their daily and bespoke needs.
+            </p>
+          </div>
         </div>
+        {/* Background Decorative Element */}
+        <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-geetato-pink/10 blur-3xl" />
+        <div className="absolute -left-24 -bottom-24 h-96 w-96 rounded-full bg-geetato-pink/5 blur-3xl" />
       </section>
 
-      {/* Quality Commitment */}
+      {/* Core Philosophies */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl">
-              <Image 
-                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=80"
-                alt="Quality Artisan Bakes"
+          <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+            <div className="relative aspect-square overflow-hidden rounded-[3rem] shadow-2xl">
+              <Image
+                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2072&auto=format&fit=crop"
+                alt="Artisan Baking Process"
                 fill
                 className="object-cover"
               />
-            </div>
-            <div>
-              <div className="flex items-center gap-3 text-geetato-pink font-bold uppercase tracking-widest text-sm mb-6">
-                <ShieldCheck className="h-6 w-6" />
-                Commitment to Quality
+              <div className="absolute inset-0 bg-gradient-to-t from-geetato-charcoal/60 to-transparent" />
+              <div className="absolute bottom-10 left-10 text-white">
+                <p className="text-sm font-bold uppercase tracking-widest text-geetato-pink">Authenticity First</p>
+                <h3 className="text-3xl font-bold">Hand-crafted Excellence</h3>
               </div>
-              <h2 className="text-4xl font-bold text-geetato-charcoal mb-8">Uncompromising Standards</h2>
+            </div>
+            <div className="flex flex-col gap-8">
+              <h2 className="text-3xl font-bold tracking-tight text-geetato-charcoal sm:text-4xl">
+                Real Ingredients, Real Taste. <br />
+                <span className="text-geetato-pink">No Compromises.</span>
+              </h2>
               <div className="space-y-6">
-                <p className="text-lg text-muted-foreground">
-                  At Geetato, quality is not a metric—it's a lifestyle. Every loaf of bread, every batch of cookies, and every cake is crafted with precision.
-                </p>
-                <ul className="space-y-4">
-                  {[
-                    "FSSAI compliant production facility",
-                    "Batch-wise quality control checks",
-                    "Export-grade ingredient sourcing",
-                    "Traditional 48-hour slow fermentation process",
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 font-bold text-geetato-charcoal">
-                      <CheckCircle2 className="h-5 w-5 text-geetato-pink" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Health Focus */}
-      <section className="py-24 bg-geetato-cream/20">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1">
-              <div className="flex items-center gap-3 text-geetato-pink font-bold uppercase tracking-widest text-sm mb-6">
-                <Heart className="h-6 w-6" />
-                Focus on Health
-              </div>
-              <h2 className="text-4xl font-bold text-geetato-charcoal mb-8">Clean Ingredients, Real Taste</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                We believe that food should nourish the body. That's why our products are designed with a "Clean Label" philosophy.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
-                  { title: "No Preservatives", desc: "No chemicals to extend shelf life." },
-                  { title: "No Refined Sugar", desc: "Naturally sweetened options available." },
-                  { title: "No Palm Oil", desc: "We use only premium fats like butter." },
-                  { title: "Zero Trans Fats", desc: "Heart-healthy artisan bakes." },
+                  {
+                    title: "No Preservatives or Chemicals",
+                    desc: "We believe in the purity of ingredients. Our products are free from artificial preservatives, ensuring you get the freshest taste possible.",
+                    icon: Leaf,
+                  },
+                  {
+                    title: "Zero Refined Sugar Options",
+                    desc: "For the health-conscious, we offer a wide range of snacks and bakes with zero refined sugar, using natural alternatives.",
+                    icon: Heart,
+                  },
+                  {
+                    title: "No Palm Oil",
+                    desc: "We prioritize your health and the environment by completely avoiding palm oil in all our baking processes.",
+                    icon: ShieldCheck,
+                  },
                 ].map((item, i) => (
-                  <div key={i} className="p-6 rounded-2xl bg-white border border-geetato-pink/10">
-                    <h4 className="font-bold mb-2">{item.title}</h4>
-                    <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  <div key={i} className="flex gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-geetato-pink/10 text-geetato-pink">
+                      <item.icon className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-geetato-charcoal">{item.title}</h4>
+                      <p className="mt-2 text-muted-foreground">{item.desc}</p>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="order-1 lg:order-2 relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl">
-              <Image 
-                src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1000&q=80"
-                alt="Healthy Ingredients"
-                fill
-                className="object-cover"
-              />
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Reliability & Scale */}
+      {/* B2B & Corporate Focus */}
+      <section className="bg-geetato-cream py-24">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="mb-16 text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-geetato-charcoal sm:text-4xl">The Preferred Corporate Partner</h2>
+            <p className="mt-4 text-lg text-muted-foreground">Why leading companies in India trust our supply chain</p>
+          </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            {[
+              {
+                title: "Scalable Solutions",
+                desc: "Whether you need 50 gift hampers or daily snacks for 5000 employees, our production scales seamlessly.",
+                icon: Zap,
+              },
+              {
+                title: "Reliable Logistics",
+                desc: "Our 24/7 supply capability and specialized delivery fleet ensure your bakes arrive fresh, every single time.",
+                icon: Award,
+              },
+              {
+                title: "Bespoke Branding",
+                desc: "We offer customized packaging and product development to align perfectly with your corporate identity.",
+                icon: Users,
+              },
+            ].map((feature, i) => (
+              <div key={feature.title} className="rounded-3xl bg-white p-10 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1">
+                <feature.icon className="mb-6 h-12 w-12 text-geetato-pink" />
+                <h3 className="mb-4 text-2xl font-bold text-geetato-charcoal">{feature.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-20">
-            <div className="flex items-center justify-center gap-3 text-geetato-pink font-bold uppercase tracking-widest text-sm mb-6">
-              <Zap className="h-6 w-6" />
-              Reliability at Scale
+          <div className="rounded-[3rem] border-2 border-dashed border-geetato-pink/30 p-12 text-center">
+            <h3 className="mb-8 text-2xl font-bold text-geetato-charcoal">FSSAI Certified & Compliant</h3>
+            <div className="flex flex-wrap justify-center gap-8">
+              {["Quality Audited", "Safe Kitchen Practices", "Hygienic Packaging", "Pure Vegetarian"].map((cert) => (
+                <div key={cert} className="flex items-center gap-2 rounded-full bg-geetato-pink/5 px-6 py-2 text-sm font-bold text-geetato-pink uppercase tracking-wider">
+                  <CheckCircle2 className="h-4 w-4" />
+                  {cert}
+                </div>
+              ))}
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-geetato-charcoal mb-8">Your 24/7 Supply Partner</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We understand the pressures of running a large business. Our supply chain is built for resilience and speed.
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial Snippet */}
+      <section className="py-24 bg-geetato-charcoal text-white overflow-hidden relative">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="mx-auto max-w-4xl text-center">
+            <div className="flex justify-center gap-1 mb-8">
+              {[1, 2, 3, 4, 5].map((s) => <Award key={s} className="h-6 w-6 text-geetato-pink fill-geetato-pink" />)}
+            </div>
+            <p className="text-3xl font-medium italic leading-relaxed md:text-4xl">
+              "Geetato has transformed our employee snack experience. The quality is unmatched, and their commitment to health aligns perfectly with our wellness goals."
             </p>
+            <div className="mt-10">
+              <p className="text-xl font-bold">HR Director</p>
+              <p className="text-geetato-pink">Leading Tech Multinational</p>
+            </div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {[
-              { 
-                icon: Factory, 
-                title: "Scalable Production", 
-                desc: "Equipped to handle high-volume corporate and HORECA orders daily without compromising quality." 
-              },
-              { 
-                icon: Truck, 
-                title: "Reliable Logistics", 
-                desc: "Daily fresh delivery across Ghaziabad, Noida, and Greater Noida with strict temperature control." 
-              },
-              { 
-                icon: Users, 
-                title: "Dedicated Support", 
-                desc: "Every B2B partner gets a dedicated account manager for seamless ordering and customization." 
-              },
-            ].map((item, i) => (
-              <div key={i} className="flex flex-col items-center text-center p-10 rounded-[3rem] bg-geetato-cream/30 border border-geetato-cream hover:bg-white hover:shadow-xl transition-all group">
-                <div className="w-16 h-16 rounded-2xl bg-geetato-pink text-white flex items-center justify-center mb-8 shadow-lg transition-transform group-hover:scale-110">
-                  <item.icon className="h-8 w-8" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                <p className="text-muted-foreground">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+        </div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20rem] font-black text-white/5 pointer-events-none">
+          GEETATO
         </div>
       </section>
 
-      {/* Certifications & Badges */}
-      <section className="py-24 bg-geetato-charcoal text-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-wrap justify-center gap-16 text-center">
-            {[
-              { title: "FSSAI Certified", icon: ShieldCheck },
-              { title: "100% Pure Veg", icon: Award },
-              { title: "Made in India", icon: Factory },
-              { title: "Daily Fresh", icon: Zap },
-            ].map((item, i) => (
-              <div key={i} className="flex flex-col items-center gap-4">
-                <div className="w-20 h-20 rounded-full border-2 border-geetato-pink/30 flex items-center justify-center text-geetato-pink">
-                  <item.icon className="h-10 w-10" />
-                </div>
-                <span className="font-bold uppercase tracking-widest text-sm">{item.title}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-24 bg-geetato-pink text-white text-center">
-        <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8">Ready for a better supply chain?</h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto mb-12">
-            Experience the Geetato difference. Let's discuss how we can support your business goals.
-          </p>
-          <div className="flex flex-wrap justify-center gap-6">
-            <Link 
+      {/* CTA Section */}
+      <section className="py-24">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          <h2 className="text-3xl font-bold text-geetato-charcoal sm:text-5xl">Experience Excellence.</h2>
+          <p className="mt-6 text-lg text-muted-foreground">Connect with us for your next bulk order or corporate partnership.</p>
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
+            <Link
               href="/contact"
-              className="px-12 py-5 bg-white text-geetato-pink rounded-full font-black text-xl hover:bg-geetato-cream transition-all shadow-2xl"
+              className="rounded-full bg-geetato-pink px-10 py-5 text-lg font-bold text-white transition-all hover:scale-105 hover:shadow-2xl"
             >
-              Get Started Today
+              Partner with Us
             </Link>
-            <Link 
+            <Link
               href="/products"
-              className="px-12 py-5 bg-geetato-charcoal text-white rounded-full font-black text-xl hover:bg-black transition-all shadow-2xl flex items-center gap-2"
+              className="rounded-full border-2 border-geetato-charcoal px-10 py-5 text-lg font-bold text-geetato-charcoal transition-all hover:bg-geetato-charcoal hover:text-white"
             >
-              Browse Products <ArrowRight className="h-6 w-6" />
+              View Full Range
+              <ArrowRight className="inline-block ml-2 h-5 w-5" />
             </Link>
           </div>
         </div>

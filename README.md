@@ -1,35 +1,36 @@
-# Geetato Bakes & Bliss
-
-Premium artisan bakery based in Indirapuram, Ghaziabad. Specializing in B2B supply for corporate clients and HORECA, with a strong D2C presence.
-
-## Image Upload Guide
-
-To maintain the premium aesthetic of Geetato, please follow these guidelines for image uploads:
-
-| Asset Type | Recommended Size | Notes |
-|------------|-----------------|-------|
-| **Hero Image** | 1920x1080px | Croissants with flour dust effect, high contrast. |
-| **Client Logos** | 200x80px | PNG with transparent background (Panasonic, Amazon, Barclays, Ericsson, Axis Bank, Crowe, Jabra). |
-| **Product Images** | 800x600px | High-quality food photography for each category. |
-| **Founder Photo** | 600x600px | Professional photo of Geetika Joshi (founder). |
-| **Gallery Images** | 1200x800px | 50+ images of breads, snacks, cakes, packaging, and facility. |
-
-**Style Notes:** All images should be high-quality, professional food photography with consistent lighting.
-
-## Project Status
-
-- [x] Initial structure and theme setup
-- [x] Marketing pages (Home, Products, B2B, About)
-- [x] Testimonials & Gallery structure
-- [x] Contact form with validation
-- [x] SEO Metadata
-- [x] Mobile responsiveness
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
+First, run the development server:
+
 ```bash
-npm install
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

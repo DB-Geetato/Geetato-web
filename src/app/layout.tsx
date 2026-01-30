@@ -37,13 +37,6 @@ export default function RootLayout({
           data-debug="true"
           data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
         />
-        {/* 
-          ANALYTICS & TRACKING SETUP:
-          1. Google Analytics 4: Add gtag.js script here.
-          2. Google Tag Manager: Add GTM container script here and noscript in body.
-          3. Facebook Pixel: Add pixel base code here.
-          4. Conversion Tracking: Trigger events in form submission handlers.
-        */}
         {children}
         <VisualEditsMessenger />
       </body>
